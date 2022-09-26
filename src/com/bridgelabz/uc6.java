@@ -1,18 +1,19 @@
 package com.bridgelabz;
 import java.util.Random;
-public class uc5 {
+public class uc6 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 Random ra = new Random();
 		
-		int pos = 0, max = 100, c, r=0, na;
+		int pos = 0, max = 100, c, r=0, na, count=0;
 		while( pos != max)
 	    {
 	        na = ra.nextInt(6);
 	        int n = na+1;
 	        System.out.println("Number on Die : "+(n));
 	        c = ra.nextInt(3);
+	        count++;
 	        if(pos>100)
 	        {
 	            pos = pos - r;
@@ -47,9 +48,11 @@ Random ra = new Random();
 	                        break;
 	                }
 	        }
+	        System.out.println("CURRENT POSITION : "+pos);
+	        System.out.println();
 	    }
 		
-		System.out.println("POSITION : "+pos);
+		System.out.println("TOTAL TIMES DIE WAS THROWN : "+count);
 		System.out.println("PLAYER WON !!");
 	}
 
